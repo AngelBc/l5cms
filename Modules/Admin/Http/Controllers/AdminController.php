@@ -10,8 +10,8 @@ class AdminController extends Controller
 {
     public function __construct()
     {
+        //Checks if auth and admin
         $this->middleware(['auth', 'isAdmin']);
-        
     }
 
     /**

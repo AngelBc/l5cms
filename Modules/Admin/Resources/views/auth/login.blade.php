@@ -35,6 +35,17 @@
                     </div>
                     <!-- /.col -->
                 </div>
+
+                <div class="form-group">
+                    @if ($errors->any())
+                        @foreach($errors->all() as $error)
+                            <div class="alert alert-danger">
+                                {{ $error }}
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+
             </form>
 
             {{-- SOCIAL LOGIN --}}
